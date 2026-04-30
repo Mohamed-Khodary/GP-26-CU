@@ -60,8 +60,8 @@ all: main-build
 main-build: Test1.elf secondary-outputs
 
 # Tool invocations
-Test1.elf Test1.map: $(OBJS) $(USER_OBJS) F:\CUFE\EPE\ 4th\ Year\ (\ Finaaaaaaaaaaal\ Year\ )\Graduation\ Project\Software\BSW\ Layer\Test1\STM32F401RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Test1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\CUFE\EPE 4th Year ( Finaaaaaaaaaaal Year )\Graduation Project\Software\BSW Layer\Test1\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Test1.elf Test1.map: $(OBJS) $(USER_OBJS) F:\CUFE\EPE\ 4th\ Year\ (\ Finaaaaaaaaaaal\ Year\ )\Graduation\ Project\Software\GP-26-CU\BSW\ Layer\Test1\STM32F401RCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Test1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\CUFE\EPE 4th Year ( Finaaaaaaaaaaal Year )\Graduation Project\Software\GP-26-CU\BSW Layer\Test1\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
